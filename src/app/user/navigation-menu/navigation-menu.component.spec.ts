@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { UserManagementComponent } from './user-management.component'
+import { NavigationMenuComponent } from './navigation-menu.component'
 
-describe('UserManagementComponent', () => {
-  let component: UserManagementComponent
-  let fixture: ComponentFixture<UserManagementComponent>
+describe('NavigationMenuComponent', () => {
+  let component: NavigationMenuComponent
+  let fixture: ComponentFixture<NavigationMenuComponent>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [UserManagementComponent],
+      declarations: [NavigationMenuComponent],
     }).compileComponents()
   })
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UserManagementComponent)
+    fixture = TestBed.createComponent(NavigationMenuComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
   })

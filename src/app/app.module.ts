@@ -11,7 +11,6 @@ import { InventoryModule } from './inventory/inventory.module'
 import { MaterialModule } from './material.module'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 import { PointOfSaleModule } from './point-of-sale/point-of-sale.module'
-import { UserModule } from './user/user.module'
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, PageNotFoundComponent],
@@ -23,7 +22,6 @@ import { UserModule } from './user/user.module'
     FlexLayoutModule,
     InventoryModule,
     PointOfSaleModule,
-    UserModule,
     HttpClientModule,
   ],
   providers: [],
