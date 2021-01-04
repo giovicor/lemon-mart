@@ -5,5 +5,14 @@
     Management</a>
   <a mat-button routerLink="/manager/receipts" routerLinkActive="active-link">Receipt
     Lookup</a>
+  <span class="flex-spacer"></span>
+  <button mat-icon-button routerLink="/inventory" matTooltip="Inventory"
+    aria-label="Inventory">
+    <mat-icon>list</mat-icon>
+  </button>
+  <button mat-icon-button routerLink="/pos" matTooltip="Point of sale"
+    aria-label="Point of sale">
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
 </mat-toolbar>
 <router-outlet></router-outlet>

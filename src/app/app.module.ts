@@ -10,7 +10,6 @@ import { HomeComponent } from './home/home.component'
 import { InventoryModule } from './inventory/inventory.module'
 import { MaterialModule } from './material.module'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
-import { PointOfSaleModule } from './point-of-sale/point-of-sale.module'
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, PageNotFoundComponent],
@@ -21,7 +20,6 @@ import { PointOfSaleModule } from './point-of-sale/point-of-sale.module'
     MaterialModule,
     FlexLayoutModule,
     InventoryModule,
-    PointOfSaleModule,
     HttpClientModule,
   ],
   providers: [],
