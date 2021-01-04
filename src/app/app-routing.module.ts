@@ -23,6 +23,11 @@ const routes: Routes = [
         (module) => module.PointOfSaleModule
       ),
   },
+  {
+    path: 'inventory',
+    loadChildren: () =>
+      import('./inventory/inventory.module').then((module) => module.InventoryModule),
+  },
   { path: '**', component: PageNotFoundComponent },
 ]
 
