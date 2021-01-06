@@ -1,24 +1,27 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing'
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing'
+import { RouterTestingModule } from '@angular/router/testing'
 
+import { MaterialModule } from '../material.module'
 import { InventoryComponent } from './inventory.component'
 
 describe('InventoryComponent', () => {
-  let component: InventoryComponent
-  let fixture: ComponentFixture<InventoryComponent>
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [InventoryComponent],
-    }).compileComponents()
-  })
+  beforeEach(
+    waitForAsync(
+      () => {
+        TestBed.configureTestingModule(
+          {
+            declarations: [InventoryComponent],
+            imports: [RouterTestingModule, MaterialModule],
+          }
+        ).compileComponents()
+      }
+    )
+  )
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(InventoryComponent)
-    component = fixture.componentInstance
-    fixture.detectChanges()
-  })
-
-  it('should create', () => {
+  it('should create the component', () => {
+    const fixture = TestBed.createComponent(InventoryComponent)
+    const component = fixture.componentInstance
     expect(component).toBeTruthy()
   })
 })

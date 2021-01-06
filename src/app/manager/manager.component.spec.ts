@@ -1,24 +1,29 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing'
+import { HttpClientModule } from '@angular/common/http'
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing'
+import { RouterTestingModule } from '@angular/router/testing'
 
+import { MaterialModule } from '../material.module'
 import { ManagerComponent } from './manager.component'
 
 describe('ManagerComponent', () => {
-  let component: ManagerComponent
-  let fixture: ComponentFixture<ManagerComponent>
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ManagerComponent],
-    }).compileComponents()
-  })
+  beforeEach(
+    waitForAsync(
+      () => {
+        TestBed.configureTestingModule(
+          {
+            declarations: [ManagerComponent],
+            imports: [RouterTestingModule, MaterialModule, HttpClientModule],
+          }
+        ).compileComponents()
+      }
+    )
+  )
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ManagerComponent)
-    component = fixture.componentInstance
-    fixture.detectChanges()
-  })
-
-  it('should create', () => {
+  it('should create the component', () => {
+    const fixture = TestBed.createComponent(ManagerComponent)
+    const component = fixture.componentInstance
     expect(component).toBeTruthy()
   })
+
 })
