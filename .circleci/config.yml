@@ -9,7 +9,7 @@ jobs:
 
       - add_ssh_keys:
           fingerprints:
-            - '8c:24:6f:3f:f9:cb:71:b7:22:ed:14:4a:cb:a5:b7:7d'
+            - 'fe:c8:f8:42:0f:80:65:b8:87:2a:05:d8:8f:2f:dc:57'
 
       - restore_cache:
           keys:
@@ -38,7 +38,7 @@ jobs:
 
       - run:
           name: Tar & Gzip compiled app
-          command: tar zcf dist.tar.gz dist/local-weather-app
+          command: tar zcf dist.tar.gz dist/lemon-mart
       - store_artifacts:
           path: dist.tar.gz
 workflows:
