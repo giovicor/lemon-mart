@@ -51,7 +51,7 @@ export class MatIconRegistryFake {
    * and is not loading an icon by name or URL.
    */
   getDefaultFontSetClass(): string {
-    return ""
+    return ''
   }
 
   private _svgElementFromString(str: string): SVGElement {
