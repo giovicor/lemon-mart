@@ -33,6 +33,10 @@ export class HomeComponent implements OnInit {
 
     combineLatest([this.authService.authStatus$, this.authService.currentUser$])
       .pipe(
+        tap(([authStatus, user]) => {
+          console.log('authStatus.isAuthenticated: ' + authStatus.isAuthenticated)
+          console.log('user._id: ' + user._id)
+        }),
         filter(([authStatus, user]) => authStatus.isAuthenticated && user?._id !== ''),
         tap(([authStatus, user]) => {
           this.router.navigate(['/manager'])

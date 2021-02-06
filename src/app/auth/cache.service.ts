@@ -1,9 +1,17 @@
 export abstract class CacheService {
-  protected getItem<T>(key: string): T | null {
+  protected getItem<T>(key: string): T | string | null {
     const data = localStorage.getItem(key)
+
     if (data != null) {
-      return JSON.parse(data)
+      if (this.isJson(data)) {
+        // console.log('getItem - key: ' + key + ' data IS JSON')
+        return JSON.parse(data)
+      } else {
+        // console.log('getItem - key: ' + key + ' data IS NOT JSON')
+        return data
+      }
     }
+
     return null
   }
 
@@ -21,5 +29,14 @@ export abstract class CacheService {
 
   protected clear(): void {
     localStorage.clear()
+  }
+
+  private isJson(str: string): boolean {
+    try {
+      JSON.parse(str)
+    } catch (e) {
+      return false
+    }
+    return true
   }
 }
