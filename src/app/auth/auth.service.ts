@@ -53,10 +53,10 @@ export abstract class AuthService extends CacheService implements IAuthService {
     super()
 
     if (this.hasExpiredToken()) {
-      console.log('constructor - token is EXPIRED, so log the user out')
+      // console.log('constructor - token is EXPIRED, so log the user out')
       this.logout(true)
     } else {
-      console.log('constructor - token is VALID, so getAuthStatusFromToken() ')
+      // console.log('constructor - token is VALID, so getAuthStatusFromToken() ')
       this.authStatus$.next(this.getAuthStatusFromToken())
       // To load user on browser refresh,
       // resume pipeline must activate on the next cycle
