@@ -10,6 +10,7 @@ import { AppComponent } from './app.component'
 import { AuthHttpInterceptor } from './auth/auth.http.interceptor'
 import { InMemoryAuthService } from './auth/auth.in-memory.service'
 import { AuthService } from './auth/auth.service'
+import { SimpleDialogComponent } from './common/simple-dialog.component'
 import { HomeComponent } from './home/home.component'
 // import { HomeComponent } from './home/home.component.simple'
 import { LoginComponent } from './login/login.component'
@@ -17,7 +18,13 @@ import { MaterialModule } from './material.module'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, PageNotFoundComponent, LoginComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    PageNotFoundComponent,
+    LoginComponent,
+    SimpleDialogComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -32,5 +39,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     { provide: HTTP_INTERCEPTORS, useClass: AuthHttpInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
+  // Since 9.0.0. With Ivy, this property is no longer necessary.
+  // entryComponents: [SimpleDialogComponent],
 })
 export class AppModule {}
