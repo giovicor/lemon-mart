@@ -6,6 +6,6 @@ export class AppPage {
   }
 
   async getTitleText(): Promise<string> {
-    return element(by.css('app-root mat-toolbar a h1')).getText()
+    return element(by.css('app-root div mat-toolbar a h1')).getText()
   }
 }
