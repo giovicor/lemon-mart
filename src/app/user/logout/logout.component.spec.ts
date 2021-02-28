@@ -12,9 +12,9 @@ describe('LogoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      declarations: [LogoutComponent],
       imports: commonTestingModules,
       providers: commonTestingProviders,
-      declarations: [LogoutComponent],
     }).compileComponents()
   })
 

@@ -2,7 +2,11 @@ import { TestBed, waitForAsync } from '@angular/core/testing'
 import { MediaObserver } from '@angular/flex-layout'
 import { MatIconRegistry } from '@angular/material/icon'
 import { DomSanitizer } from '@angular/platform-browser'
-import { ObservablePropertyStrategy, autoSpyObj } from 'angular-unit-test-helper'
+import {
+  ObservablePropertyStrategy,
+  autoSpyObj,
+  createComponentMock,
+} from 'angular-unit-test-helper'
 
 import { AppComponent } from './app.component'
 import { AuthService } from './auth/auth.service'
@@ -23,7 +27,7 @@ describe('AppComponent', () => {
       )
 
       TestBed.configureTestingModule({
-        declarations: [AppComponent],
+        declarations: [AppComponent, createComponentMock('NavigationMenuComponent')],
         imports: [commonTestingModules],
         providers: [
           { provide: MediaObserver, useClass: MediaObserverFake },

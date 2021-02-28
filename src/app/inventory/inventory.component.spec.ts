@@ -1,7 +1,6 @@
 import { TestBed, waitForAsync } from '@angular/core/testing'
-import { RouterTestingModule } from '@angular/router/testing'
 
-import { MaterialModule } from '../material.module'
+import { commonTestingModules } from '../common/common.testing'
 import { InventoryComponent } from './inventory.component'
 
 describe('InventoryComponent', () => {
@@ -9,7 +8,7 @@ describe('InventoryComponent', () => {
     waitForAsync(() => {
       TestBed.configureTestingModule({
         declarations: [InventoryComponent],
-        imports: [RouterTestingModule, MaterialModule],
+        imports: commonTestingModules,
       }).compileComponents()
     })
   )
