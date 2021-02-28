@@ -8,7 +8,7 @@ describe('UiService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: commonTestingModules
+      imports: commonTestingModules,
     })
 
     service = TestBed.inject(UiService)

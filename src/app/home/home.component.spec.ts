@@ -10,10 +10,7 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        HomeComponent,
-        createComponentMock('LoginComponent')
-      ],
+      declarations: [HomeComponent, createComponentMock('LoginComponent')],
       imports: commonTestingModules,
       providers: commonTestingProviders,
     }).compileComponents()

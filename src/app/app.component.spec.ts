@@ -16,7 +16,6 @@ import {
 describe('AppComponent', () => {
   beforeEach(
     waitForAsync(() => {
-
       const authServiceSpy = autoSpyObj(
         AuthService,
         ['authStatus$'],
