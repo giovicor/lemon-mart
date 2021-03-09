@@ -132,6 +132,10 @@
               "devServerTarget": "lemon-mart:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

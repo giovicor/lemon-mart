@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "lemon-mart-gio"
+  },
+  "targets": {
+    "lemon-mart-gio": {
+      "hosting": {
+        "lemon-mart": [
+          "lemon-mart-gio"
+        ]
+      }
+    }
   }
 }
