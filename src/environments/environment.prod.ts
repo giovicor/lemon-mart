@@ -1,5 +1,8 @@
+import { AuthMode } from 'src/app/auth/auth.enum'
+
 export const environment = {
   production: true,
+  authMode: AuthMode.Firebase,
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   firebaseConfig: {
     apiKey: 'AIzaSyCyrMogfn50uQIsUiyd44prislihs3bwRM',
